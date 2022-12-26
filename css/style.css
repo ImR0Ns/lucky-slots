@@ -1,0 +1,110 @@
+body {
+    background-color: white;
+}
+.colorContainer {
+    background-color: #f1faee;
+}
+header {
+    padding: 20px 10px 0px 10px;
+    margin: 0px 0px 50px 0px;
+}
+header h3{
+    font-size: 20px;
+    padding: 5px 0px 0px 0px;
+    border: 1px solid #457b9d;
+    color: #1d3557;
+}
+header h2 {
+    color: #457b9d;
+    font-weight: 700;
+}
+.lineSlotDesign {
+    color: #e63946;
+}
+
+/* design jackpots */
+.jOne {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.jTwo {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.jThree {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.jFour {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.firstInfo {
+    border: 2px solid #457b9d;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px; 
+    margin: 0px 30px 0px 30px;
+}
+.symblol {
+    font-size: 50px;
+    margin: -50px 0px 0px -50px;
+    color: #e63946;
+}
+.stakeToWin {
+    margin: 0px 0px 0px 0px;
+    font-size: 20px;
+    color: #1d3557;
+}
+.colorStake {
+    color: #457b9d;
+    font-weight: 600;
+}
+.someMarginBetween {
+    margin-bottom: 50px;
+}
+.paytable {
+    margin: 0px 0px 30px 0px;
+    color: #457b9d;
+    font-weight: 600;
+}
+.containersForAlg {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlg p {
+    margin: 60px 0px 0px 0px;
+}
+.game {
+    margin: 30px 0px 0px 0px;
+}
+.playSlot {
+    margin: 30px 0px 10px 0px;
+    color: #457b9d;
+    font-weight: 600;
+}
+.balanceStatus {
+    font-size: 40px;
+    border: 1px solid black;
+    color: #457b9d;
+}
+.balanceStatus span {
+    color: #e63946;
+}
+.forBets {
+    margin: 20px 0px 0px 0px;
+}
+.betChoose {
+    border: 1px solid #457b9d;
+    font-size: 30px;
+    text-align: center;
+    padding:  40px 0px 0px 0px;
+    color: #1d3557;
+    cursor: pointer;
+}
+.playButton {
+    font-size: 20px;
+    margin: 0px 0px 50px 0px;
+}
