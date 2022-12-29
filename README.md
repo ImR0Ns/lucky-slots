@@ -32,8 +32,12 @@ Probably interface change.
 
 UPDATES:
 
-Rezolvari de bug-uri balanta si last win.
+Balance and last win bug fixes.
 
-Color la castigat sa vezi cum a legat liniile.
+Color won, see how he connected the lines.
 
-Jackpot-uri functionale cu crestere in timp ce joci.
+Functional jackpots that grow as you play.
+
+UPDATES:
+
+Restructuring the code to be easier to read and easier to modify!
