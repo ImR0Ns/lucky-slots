@@ -108,3 +108,208 @@ header h2 {
     font-size: 20px;
     margin: 0px 0px 50px 0px;
 }
+
+/* css separate for every row-col*/
+/* 1 */
+.containersForAlgrowOneColFirst {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowOneColFirst p {
+    margin: 60px 0px 0px 0px;
+}
+/* 2 */
+.containersForAlgrowOneColTwo {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowOneColTwo p {
+    margin: 60px 0px 0px 0px;
+}
+/* 3 */
+.containersForAlgrowOneColThree {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowOneColThree p {
+    margin: 60px 0px 0px 0px;
+}
+/* 4 */
+.containersForAlgrowOneColFour {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowOneColFour p {
+    margin: 60px 0px 0px 0px;
+}
+/* 5 */
+.containersForAlgrowOneColFive {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowOneColFive p {
+    margin: 60px 0px 0px 0px;
+}
+
+/* 1 */
+.containersForAlgrowTwoColFirst {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowTwoColFirst p {
+    margin: 60px 0px 0px 0px;
+}
+/* 2 */
+.containersForAlgrowTwoColTwo {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowTwoColTwo p {
+    margin: 60px 0px 0px 0px;
+}
+/* 3 */
+.containersForAlgrowTwoColThree {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowTwoColThree p {
+    margin: 60px 0px 0px 0px;
+}
+/* 4 */
+.containersForAlgrowTwoColFour {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowTwoColFour p {
+    margin: 60px 0px 0px 0px;
+}
+/* 5 */
+.containersForAlgrowTwoColFive {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowTwoColFive p {
+    margin: 60px 0px 0px 0px;
+}
+
+/* 1 */
+.containersForAlgrowTwoColFirst {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowTwoColFirst p {
+    margin: 60px 0px 0px 0px;
+}
+/* 2 */
+.containersForAlgrowTwoColTwo {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowTwoColTwo p {
+    margin: 60px 0px 0px 0px;
+}
+/* 3 */
+.containersForAlgrowTwoColThree {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowTwoColThree p {
+    margin: 60px 0px 0px 0px;
+}
+/* 4 */
+.containersForAlgrowTwoColFour {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowTwoColFour p {
+    margin: 60px 0px 0px 0px;
+}
+/* 5 */
+.containersForAlgrowTwoColFive {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowTwoColFive p {
+    margin: 60px 0px 0px 0px;
+}
+
+/* 1 */
+.containersForAlgrowThreeColFirst {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowThreeColFirst p {
+    margin: 60px 0px 0px 0px;
+}
+/* 2 */
+.containersForAlgrowThreeColTwo {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowThreeColTwo p {
+    margin: 60px 0px 0px 0px;
+}
+/* 3 */
+.containersForAlgrowThreeColThree {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowThreeColThree p {
+    margin: 60px 0px 0px 0px;
+}
+/* 4 */
+.containersForAlgrowThreeColFour {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowThreeColFour p {
+    margin: 60px 0px 0px 0px;
+}
+/* 5 */
+.containersForAlgrowThreeColFive {
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    height: 200px;
+}
+.containersForAlgrowThreeColFive p {
+    margin: 60px 0px 0px 0px;
+}

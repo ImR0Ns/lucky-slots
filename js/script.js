@@ -32,6 +32,7 @@ var allProb = [
     4, 4, 4, 4, "$", "$", "$", 3, 3, 3, 3, 3, 3,
     2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1
 ]
+//remove wilds
 var allProbWithoutWilds = allProb.filter((e)=>e!="w"); // for first col and last col
 
 //matrix
@@ -51,6 +52,9 @@ var gainsPerLine = {
     2: [5, 15, 50],
     1: [5, 15, 50]
 }
+
+//make cols black again after play again
+var saveColorColumns = [];
 
 $(document).ready(()=>{
 
@@ -128,6 +132,10 @@ function startGame(){
         if(currentBet[0] == null) {
             alert("Choose bet please!");
         } else if(balance >= currentBet[0]){
+
+            //jackpots
+            calculateJackPots();
+
             //reset to ?
             setAllRows(); 
 
@@ -237,6 +245,7 @@ function startGame(){
 
                 //make probabilities
                 if(getPrizes[2].length == 5){
+
                     //set cols full wild
                     setAllColWild();
                     calculateWins();
@@ -262,6 +271,13 @@ function setAllRows(){
     //reset getPrizes
     getPrizes = [[], [], []];
 
+    //reset colors
+    for(var j in saveColorColumns){
+        $("."+saveColorColumns[j]+"").css("border", "1px solid black");
+    }
+    saveColorColumns = [];
+
+    //reset to ?
     $(".rowOneColFirst").text("?");
     $(".rowTwoColFirst").text("?");
     $(".rowThreeColFirst").text("?");
@@ -310,8 +326,9 @@ function calculateWins(){
     //final return for lastWin -> $(".lastWin").text("$"+howMuchWin * currentBet[0])
     var finalSum = 0;
 
-    //for first row
+    //vars
     var counter = 0;
+    var counterTwo = 0; // for front light
 
     //firstRow
     for(var i in getPrizes[0]){
@@ -326,11 +343,20 @@ function calculateWins(){
         var howMuchWin = gainsPerLine[getPrizes[0][0]][counter-3];
         //console.log(howMuchWin) -> works fine
         finalSum += howMuchWin * currentBet[0];
+        for(var i in dicForPrizes){
+            if(i.split(",")[1] == 1 && counterTwo < counter) {
+                var getName = "containersForAlg"+i.split(",")[0];
+                saveColorColumns.push(getName);
+                $("." + getName + "").css("border", "2px solid #e63946");
+                counterTwo++;
+            }
+        }
     }
 
     //console.log(counter) //check counter for first row
 
     counter = 0;
+    counterTwo = 0;
 
     //console.log(counter) // check reset counter
 
@@ -346,10 +372,19 @@ function calculateWins(){
         var howMuchWin = gainsPerLine[getPrizes[1][0]][counter-3];
         //console.log(howMuchWin) -> works fine
         finalSum += howMuchWin * currentBet[0];
+        for(var i in dicForPrizes){
+            if(i.split(",")[1] == 2 && counterTwo < counter) {
+                var getName = "containersForAlg"+i.split(",")[0];
+                saveColorColumns.push(getName);
+                $("." + getName + "").css("border", "2px solid #e63946");
+                counterTwo++;
+            }
+        }
     }
 
     //console.log(counter) // check counter second row
     counter = 0;
+    counterTwo = 0;
 
     for(var l in getPrizes[2]){
         if(getPrizes[2][l] == getPrizes[2][0] || getPrizes[2][l] == 'w') {
@@ -362,9 +397,19 @@ function calculateWins(){
         var howMuchWin = gainsPerLine[getPrizes[2][0]][counter-3];
         //console.log(howMuchWin) -> works fine
         finalSum += howMuchWin * currentBet[0];
+        for(var i in dicForPrizes){
+            if(i.split(",")[1] == 3 && counterTwo < counter) {
+                var getName = "containersForAlg"+i.split(",")[0];
+                saveColorColumns.push(getName);
+                $("." + getName + "").css("border", "2px solid #e63946");
+                counterTwo++;
+            }
+        }
     }
 
+    //reseters
     counter = 0;
+    counterTwo = 0;
 
     /* 
         next check
@@ -372,23 +417,59 @@ function calculateWins(){
          \  /
           \/
     */
-    var inV = [
-        getPrizes[0][0], getPrizes[1][1], getPrizes[2][2],
-        getPrizes[1][3], getPrizes[0][4]
-    ]
-    //console.log(inV)
-    for(var j=0; j<inV.length; j++){
-        if(inV[j] == inV[0]) { counter++; }
+   //new dictionary for front light
+    var newinV = {
+        "rowOneColFirst": getPrizes[0][0],
+        "rowTwoColTwo": getPrizes[1][1],
+        "rowThreeColThree": getPrizes[2][2],
+        "rowTwoColFour": getPrizes[1][3],
+        "rowOneColFive": getPrizes[0][4]
     }
+
+    //console.log(newinV)
+
+    for(var j in newinV){
+        if(newinV[j] == newinV["rowOneColFirst"] || newinV[j] == 'w') { counter++; }
+        else { break; }
+    }
+
     //console.log(counter)
+
     if(counter >=3) {
-        var howMuchWin = gainsPerLine[inV[0]][counter-3];
+        var howMuchWin = gainsPerLine[newinV["rowOneColFirst"]][counter-3];
         //console.log(howMuchWin) //-> works fine
         finalSum += howMuchWin * currentBet[0];
+        for(var i in newinV){
+            if(counterTwo < counter) {
+                var getName = "containersForAlg"+i;
+                //console.log(getName)
+                saveColorColumns.push(getName);
+                $("." + getName + "").css("border", "2px solid #e63946");
+                counterTwo++;
+            }
+        }
     }
 
     //to back and front
     balance += finalSum;
-    $(".lastWin").text("$"+finalSum);
 
+    //fix last win bug
+    if(finalSum != 0) {
+        $(".lastWin").text("$"+finalSum);
+    }
+
+}
+
+function calculateJackPots(){
+    //add to jackpots per play 
+    jackpotOne += currentBet[0] / 20;
+    jackpotTwo += currentBet[0] / 15;
+    jackpotThree += currentBet[0] / 8;
+    jackpotFour += currentBet[0] / 7;
+
+    //"set to front
+    $(".jOne").text(jackpotOne.toFixed(2));
+    $(".jTwo").text(jackpotTwo.toFixed(2));
+    $(".jThree").text(jackpotThree.toFixed(2));
+    $(".jFour").text(jackpotFour.toFixed(2));
 }
