@@ -108,6 +108,22 @@ header h2 {
     font-size: 20px;
     margin: 0px 0px 50px 0px;
 }
+.riskButton {
+    font-size: 20px;
+    margin: -20px 0px 50px 0px;
+    visibility: hidden;
+}
+.redDouble {
+    background-color: #e63946;
+    border: none;
+    width: 50%;
+}
+.blackDouble {
+    background-color: black;
+    border: none;
+    width: 50%;
+    margin-right: auto;
+}
 
 /* css separate for every row-col*/
 /* 1 */

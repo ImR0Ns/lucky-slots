@@ -132,6 +132,28 @@ export default function calculateWins(){
         }
     }
 
+    //make risk button for double
+    
+    if(finalSum > 0) {
+        $(".riskButton").css("visibility", "visible");
+        var probRedBlack = ["redDouble", "blackDouble"];
+        var idx = Math.floor(Math.random() * probRedBlack.length);
+        var response = probRedBlack[idx];
+        console.log(response)
+        $("."+response+"").click(()=>{
+
+            //to back and front
+            addSubstractBalance(finalSum *= 2, true);
+
+            $(".riskButton").css("visibility", "hidden");
+            $(".lastWin").text("$"+finalSum);
+            finalSum = 0;
+            return true;
+        })
+
+    }
+
+
     //to back and front
     addSubstractBalance(finalSum, true);
 
@@ -139,5 +161,5 @@ export default function calculateWins(){
     if(finalSum != 0) {
         $(".lastWin").text("$"+finalSum);
     }
-
+    finalSum = 0;
 }

@@ -11,6 +11,9 @@ export default function setAllRows(){
         }
     }, 0);
 
+    //reset visibility on risk button -> means he press play button
+    $(".riskButton").css("visibility", "hidden");
+
     //reset getPrizes
     modifyGetPrisez();
 

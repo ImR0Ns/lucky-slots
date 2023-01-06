@@ -130,6 +130,23 @@
                 <p class="balanceStatus col-md">Last Win<br><span class="lastWin"> $0</span></p>
             </div>
             <button class="playButton">PLAY</button>
+            <button class="riskButton" data-bs-toggle="modal" data-bs-target="#exampleModal">RISK</button>
+            <!-- Modal for risk button -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Double your amount</h1>
+                            <p>BETA v0.1</p>
+                        </div>
+                        <div class="modal-footer text-center">
+                            <button type="button" class="btn btn-secondary redDouble" data-bs-dismiss="modal">RED</button>
+                            <button type="button" class="btn btn-secondary blackDouble" data-bs-dismiss="modal">BLACK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal for risk button -->
         </div>
     </div>
 
